@@ -10,7 +10,12 @@ library(shinyBS)
 library(shinyjs)
 library(shinydashboard)
 library(gdata)
+library(rsconnect)
+#library(markdown)
+require(markdown)
+#require(rmarkdown)
 
+#install.packages("rmarkdown", repos = "https://cran.revolutionanalytics.com")
 header <- dashboardHeader(title = "Insulin Recommendation Portal", titleWidth = 350, 
                           
                           dropdownMenu(type = "notifications",
@@ -63,8 +68,7 @@ sidebar <- dashboardSidebar(width = 350,
                                      menuSubItem("Patient Data", tabName = "pd")
                             ),
                             menuItem("API Integration", tabName = "api", icon = icon("medkit")),
-                            menuItem("Chat", tabName = "chat", icon = icon("comment")),
-                            menuItem("Code", tabName = "code", icon = icon("code"))
+                            menuItem("Chat", tabName = "chat", icon = icon("comment"))
                             )
 )
 
