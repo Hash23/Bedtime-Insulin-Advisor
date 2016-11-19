@@ -47,13 +47,13 @@ server<- function(input, output, session) {
   observeEvent(input$goButton1, {
     
     output$basalphy <- renderText({ paste("Basal insulin dose recommended","<font color=\"8a46ff\"><b>", 
-                                          format(round((input$slider3 + (input$carbs1 * input$gs))/input$ic1, 2), nsmall = 2), paste("mg/dL"),"</b></font>")  })
+                                          format(round((input$slider3 + (input$carbs1 * input$gs))/input$ic1, 2), nsmall = 2), paste("U"),"</b></font>")  })
   })
   
   observeEvent(input$goButton2, {
     
     output$basalpat <- renderText({ paste("Basal insulin dose recommended","<font color=\"8a46ff\"><b>", 
-                                          format(round((input$slider4 + (input$carbs2 * input$gs))/input$ic1, 2), nsmall = 2), paste("mg/dL"),"</b></font>")  })
+                                          format(round((input$slider4 + (input$carbs2 * input$gs))/input$ic1, 2), nsmall = 2), paste("U"),"</b></font>")  })
   })
   
   # Create a spot for reactive variables specific to this particular session

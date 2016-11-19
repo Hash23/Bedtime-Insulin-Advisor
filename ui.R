@@ -258,7 +258,7 @@ body <- dashboardBody(
                      selectInput("insulin type", "Insulin Type",
                                  list("Rapid-acting insulin"= c("Insulin glulisine (Apidra)", "Insulin lispro (Humalog)", "Insulin aspart (NovoLog)"),
                                       "Short-acting insulin"= c("Humulin R", "Novolin R"), 
-                                      "Intermediate-acting insulin"=c("NPH (Humulin N, Novolin N)"),
+                                      "Intermediate-acting insulin"= c("NPH (N)", ""), 
                                       "Long-acting insulin"= c("Insulin detemir (Levemir)","Insulin glargine (Lantus)"))),
                      numericInput("insulin dose", "Daily Insulin Dose (U)", "", 10, min = 1, max = 80),
                      tags$button(id = "goButton", type = "button", class = "btn action-button btn-primary", "Submit")
